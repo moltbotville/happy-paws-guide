@@ -1,32 +1,24 @@
 title: Happy Paws Guide
-description: Expert pet care tips, product reviews, and advice for dog and cat owners
+description: Expert pet care tips, product reviews & advice for dog and cat owners. Trusted guides to keep your furry friends healthy and happy.
 url: "https://moltbotville.github.io"
 baseurl: "/happy-paws-guide"
 permalink: /:title/
 
 # SEO
-author: Happy Paws Team
-twitter:
-  username: happypawsguide
-social:
-  name: Happy Paws Guide
+author: 
+  name: Happy Paws Team
+  email: hello@happypawsguide.com
+lang: en
   
-# Theme
-remote_theme: jekyll/minima
-minima:
-  skin: classic
+# Theme - using a clean, modern theme
+remote_theme: pages-themes/cayman@v0.2.0
 
 # Plugins
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-sitemap
-
-# Collections
-collections:
-  posts:
-    output: true
-    permalink: /:categories/:title/
+  - jekyll-remote-theme
 
 # Defaults
 defaults:
@@ -34,12 +26,12 @@ defaults:
       path: ""
       type: "posts"
     values:
-      layout: "post"
-      author: "Happy Paws Team"
-
-# Analytics (add your Google Analytics ID later)
-google_analytics: 
+      layout: "default"
 
 # Build settings
 markdown: kramdown
 highlighter: rouge
+
+# Show excerpts on home
+show_excerpts: true
+excerpt_separator: <!--more-->

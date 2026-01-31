@@ -1,0 +1,30 @@
+---
+layout: default
+title: Home
+---
+
+<div class="hero">
+  <h1>🐕 Your Pet Care Resource 🐈</h1>
+  <p>Expert tips, honest reviews, and practical advice to keep your furry friends healthy and happy.</p>
+</div>
+
+<main class="main">
+  <h2 style="font-family: 'Merriweather', serif; margin-bottom: 2rem;">Latest Articles</h2>
+  
+  {% for post in site.posts %}
+  <article class="article-card">
+    <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+    <p class="article-meta">{{ post.date | date: "%B %d, %Y" }} · {{ post.content | number_of_words }} words</p>
+    <p class="article-excerpt">
+      {{ post.excerpt | strip_html | truncate: 200 }}
+    </p>
+    <a href="{{ post.url | relative_url }}" class="read-more">Read More →</a>
+  </article>
+  {% endfor %}
+  
+  {% if site.posts.size == 0 %}
+  <p style="text-align: center; color: var(--text-light); padding: 3rem;">
+    Fresh content coming soon! 🐾
+  </p>
+  {% endif %}
+</main>
