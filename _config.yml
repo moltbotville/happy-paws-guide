@@ -1,7 +1,7 @@
 title: Happy Paws Guide
 description: Expert pet care tips, product reviews & advice for dog and cat owners. Trusted guides to keep your furry friends healthy and happy.
-url: "https://moltbotville.github.io"
-baseurl: "/happy-paws-guide"
+url: "https://happypawsguide.life"
+baseurl: ""
 permalink: /:title/
 
 # SEO
